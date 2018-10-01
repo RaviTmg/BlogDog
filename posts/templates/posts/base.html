@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {%load staticfiles%}
+    <link rel="stylesheet" type="text/css" href="{%static 'posts/css/bootstrap.min.css'%}"/>
+    <link rel="stylesheet" type="text/css" href="{%static 'posts/css/head.css'%}"/>
+	<title>{%block title%}Posts{%endblock%}</title>
+	
+    
+</head>
+<body>
+<!--<nav class="navbar navbar-default">
+	<div class="container">
+		<div class="navbar-header">
+		      <a class="navbar-brand" href="{%url 'posts:index'%}">BlogDog</a>
+		</div>
+		<div>
+			<ul  class="nav navbar-nav">
+			    <li><a href="{%url 'posts:post-add'%}">Add a new post</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>   -->
+{%block body%}
+{%endblock%}
+<!--</body>
+</html>
+<button type="button" class="btn btn-default">
+	<a class="navbar-brand" href="{%url 'posts:index'%}">BlogDog</a>
+</button> 
+<button type="button" class="btn btn-default">
+    <a href="{%url 'posts:post-add'%}">Add a new post</a>
+ </button>-->

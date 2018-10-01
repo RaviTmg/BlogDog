@@ -1,0 +1,42 @@
+{%extends 'posts/base.html'%}
+{%block body%}
+{%if object_list%}
+ <!--  <div class="jumbotron head" style="min-height:70%">
+    <div style="text-align:center">
+        <h2>THE GNU LINUX USERS GROUP</h2>
+        <h3>Our projects</h3>
+        <button type="button" class="btn btn-default">
+            <a href="{%url 'posts:index'%}">BlogDog</a>
+        </button> 
+        <button type="button" class="btn btn-default">
+            <a href="{%url 'posts:post-add'%}">Add a new post</a>
+        </button>
+    </div>
+    </div> -->
+    <div class="mainimg">
+    {%load staticfiles%}
+    <img class="myimg" src="{%static 'posts/images/mainimg.png'%}"/>
+    <div class="container">
+        <ul>
+            <li><a class="linkhead1" style="color:white" href="{%url 'posts:index'%}">BlogDog</a></li>
+            <li><a class="linkhead2" style="color:white" href="{%url 'posts:post-add'%}">Add a new post</a></li>            
+        </ul>
+    </div>
+    <h1 class="txtinimg">THE GNU LINUX USERS GROUP</h1>
+    </div>
+	<div class="row">
+    {%for post in object_list%}
+    <div class="col-sm-12 col-md-6 jumbotron elements">
+    <div class="container">
+	<h3><a href="{%url 'posts:detail' post.id%}">{{post.title}}</a></h3>
+    <h4>{{post.content}}</h4><br>
+    {{post.updated}}<br>
+    </div>
+    </div>
+    {%endfor%}
+    </div>
+
+{%else%}
+    <h2>Hey add something</h2>
+{%endif%}
+{%endblock%}
